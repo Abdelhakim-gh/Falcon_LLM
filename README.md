@@ -133,8 +133,8 @@ Run test scripts or interact with the model in a Python session.
 
 - Engage with the model interactively for text generation or other NLP tasks.
   ![](imgs/10.png)
-  ![](imgs/11.png)
   ![](imgs/8.png)
+  ![](imgs/11.png)
   ![](imgs/12.png)
   ![](imgs/9.png)
 
