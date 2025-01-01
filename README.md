@@ -78,16 +78,22 @@ Falcon LLM has demonstrated leading performance in various evaluations:
    ```
 
    ```python
-   # Load the pipeline with the Falcon model
-   generator = pipeline('text-generation', model='tiiuae/falcon-7b')
+   # Use a pipeline as a high-level helper
+   from transformers import pipeline
+
+   pipe = pipeline("text-generation", model="tiiuae/Falcon3-1B-Base")
 
    # Generate text
    prompt = "Once upon a time"
-   result = generator(prompt, max_length=50, num_return_sequences=1)
+   result = pipe(prompt, max_length=1000, num_return_sequences=1)
 
    # Print the generated text
    print(result[0]['generated_text'])
    ```
+
+   ![](imgs/13.png)
+   ![](imgs/14.png)
+   <br><br>
 
 Run test scripts or interact with the model in a Python session.
 
