@@ -36,6 +36,8 @@ These enhancements ensure that Falcon LLM achieves state-of-the-art performance 
 
 ## Benchmark Performance
 
+> https://huggingface.co/blog/falcon3
+
 Falcon LLM has demonstrated leading performance in various evaluations:
 
 - [AI2 Reasoning Challenge](https://allenai.org/data/arc) (ARC): Grade-school multiple choice science questions.
@@ -44,8 +46,12 @@ Falcon LLM has demonstrated leading performance in various evaluations:
 - [TruthfulQA](https://arxiv.org/abs/2109.07958): Tests the model’s ability to separate fact from an adversarially-selected set of incorrect statements.
   <br><br>
   ![](imgs/falcon_benchmark.png)
+  ![](imgs/falcon_benchmarks.png)
 
 ## Demo Instructions
+
+![](imgs/falcon_run.png)
+<br><br>
 
 ### Step 1: Install Falcon from Ollama
 
