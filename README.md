@@ -53,15 +53,12 @@ Falcon LLM has demonstrated leading performance in various evaluations:
 ![](imgs/falcon_run.png)
 <br><br>
 
-### Step 1: Install Falcon from Ollama
+## Demo Instructions
 
-1. Download and install the Ollama environment from [Ollama Library](https://ollama.com/library/falcon3).
-2. Use the provided instructions to set up Falcon-3 for your operating system.
-
-### Step 2: Test Locally
+### Running Falcon via Hugging Face Transformers
 
 1. Set up a Python environment with the Hugging Face Transformers library.
-2. Download the Falcon model via Hugging Face:
+2. Download the Falcon model (1b, 7b, 10b, 11b, 40b, 180b) via Hugging Face:
 
    ```bash
    pip install transformers
@@ -74,12 +71,72 @@ Falcon LLM has demonstrated leading performance in various evaluations:
    tokenizer = AutoTokenizer.from_pretrained("tiiuae/falcon-7b")
    ```
 
-3. Run test scripts or interact with the model in a Python session.
+3. Run from transformers import pipeline
 
-### Step 3: Interact via Open Web UI
+   ```bash
+   pip install transformers
+   ```
 
-1. Access Falcon’s web interface through [Falcon Web UI](https://falconllm.tii.ae).
-2. Engage with the model interactively for text generation or other NLP tasks.
+   ```python
+   # Load the pipeline with the Falcon model
+   generator = pipeline('text-generation', model='tiiuae/falcon-7b')
+
+   # Generate text
+   prompt = "Once upon a time"
+   result = generator(prompt, max_length=50, num_return_sequences=1)
+
+   # Print the generated text
+   print(result[0]['generated_text'])
+   ```
+
+Run test scripts or interact with the model in a Python session.
+
+### Running Falcon via Ollama
+
+- Download and install the Ollama environment from [Ollama Library](https://ollama.com).
+- Use the provided instructions to set up [Falcon](https://ollama.com/search?q=falcon%20) for your operating system.
+
+  ```bash
+  ollama pull <falcon-model>
+  ```
+
+  ```bash
+  ollama run <falcon-model>
+  ```
+
+- Engage with the model interactively for text generation or other NLP tasks.
+  ![](imgs/3.png)
+  ![](imgs/4.png)
+  ![](imgs/5.png)
+  ![](imgs/6.png)
+  ![](imgs/7.png)
+- Run test scripts or interact with the model in an Ollama session.
+
+### Running Falcon via ollama & Open Web UI as interface
+
+- Download and install the Ollama environment from [Ollama Library](https://ollama.com).
+- Use the provided instructions to set up [Falcon](https://ollama.com/search?q=falcon%20) for your operating system.
+  ```bash
+     ollama pull <falcon-model>
+  ```
+- Setup open web UI as interface for Falcon model, Open WebUI can be installed using pip, the Python package installer. Before proceeding, ensure you're using **Python 3.11** to avoid compatibility issues.
+
+  - **Install Open WebUI**: Open your terminal and run the following command to install Open WebUI:
+    ```
+    pip install open-webui
+    ```
+  - **Running Open WebUI**: After installation, you can start Open WebUI by executing:
+    ```
+    open-webui serve
+    ```
+  - This will start the Open WebUI server, which you can access at [http://localhost:8080](http://localhost:8080/)
+
+- Engage with the model interactively for text generation or other NLP tasks.
+  ![](imgs/10.png)
+  ![](imgs/11.png)
+  ![](imgs/8.png)
+  ![](imgs/12.png)
+  ![](imgs/9.png)
 
 ## Additional Resources
 
